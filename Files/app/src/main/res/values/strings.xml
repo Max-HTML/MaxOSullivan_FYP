@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">App for Beach Cleaning Operations</string>
+    <string name="forgotPasswordString">Forgot Password?</string>
+    <string name="appTitleString">App for Beach Cleaning Operations</string>
+    <string name="loginString">Login</string>
+    <string name="createAccountString">Create Account?</string>
+    <string name="inputUsernameString">Username/Email</string>
+    <string name="inputPasswordString">Password</string>
+    <string name="authorString">Created by Max O\'Sullivan</string>
+    <string name="studentIDNoString">STUDENT ID NUMBER: 19234481</string>
+    <string name="createAccountPageTitle">Create Account</string>
+    <string name="existingMember">Existing Member?</string>
+    <string name="createAccountCheckBox">Do you accept our Terms and Conditions?</string>
+    <string name="signUpString">Sign Up</string>
+
+</resources>

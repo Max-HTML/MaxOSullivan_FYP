@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "857061226968",
+    "project_id": "beach-cleaning-app",
+    "storage_bucket": "beach-cleaning-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:857061226968:android:050400fc9d0866d4a81aad",
+        "android_client_info": {
+          "package_name": "com.example.appforbeachcleaningoperations"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "857061226968-vaemml29g6l8mjlqdurabdfbeaab1ll8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDC2SKoxGuaIF0rAcSM_IdwS46kwD9nNBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "857061226968-vaemml29g6l8mjlqdurabdfbeaab1ll8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
