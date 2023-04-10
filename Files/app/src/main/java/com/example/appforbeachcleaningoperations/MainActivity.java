@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,7 +23,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth mAuth;
-    EditText editTextUsername, editTextEmail, editTextPassword;
+    EditText editTextEmail, editTextPassword;
     Button login;
     TextView forgotPassword;
     TextView createAccount;
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         createAccount = findViewById(R.id.mainActivityCreateAccount);
         forgotPassword = findViewById(R.id.forgotPassword);
 
+        //if user clicks Existing Member?
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,14 +66,36 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        //if user forgets their password
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Link to Change Password sent to your Email!", Toast.LENGTH_LONG).show();
+                //checks email inputted
+                String forgotPasswordEmail;
+                forgotPasswordEmail = String.valueOf(editTextEmail.getText());
+                if (TextUtils.isEmpty(forgotPasswordEmail) || !Patterns.EMAIL_ADDRESS.matcher(forgotPasswordEmail).matches()) {
+                    progressBar.setVisibility(View.GONE);
+                    Toast.makeText(MainActivity.this, "Enter Email!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else {
+                mAuth.sendPasswordResetEmail(forgotPasswordEmail).addOnCompleteListener(new OnCompleteListener<Void>() {
+                      @Override
+                       public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()){
+                                Toast.makeText(MainActivity.this, "Successfully sent password reset to inputed email!", Toast.LENGTH_LONG).show();
+                            }
+                            else {
+                                Toast.makeText(MainActivity.this, "Failed to send password reset to email!", Toast.LENGTH_LONG).show();
+                            }
+                       }
+                       });
+                }
             }
         });
 
-
+        //if user clicks login button
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -82,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 //checks if email input is empty
-                if (TextUtils.isEmpty(email)) {
+                if (TextUtils.isEmpty(email) || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                     progressBar.setVisibility(View.GONE);
                     Toast.makeText(MainActivity.this, "Enter Email!", Toast.LENGTH_SHORT).show();
                     return;

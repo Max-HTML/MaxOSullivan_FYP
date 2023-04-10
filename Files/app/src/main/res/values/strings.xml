@@ -4,7 +4,7 @@
     <string name="appTitleString">App for Beach Cleaning Operations</string>
     <string name="loginString">Login</string>
     <string name="createAccountString">Create Account?</string>
-    <string name="inputUsernameString">Username/Email</string>
+    <string name="inputUsernameString">Email</string>
     <string name="inputPasswordString">Password</string>
     <string name="authorString">Created by Max O\'Sullivan</string>
     <string name="studentIDNoString">STUDENT ID NUMBER: 19234481</string>
