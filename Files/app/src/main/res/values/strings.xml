@@ -12,5 +12,7 @@
     <string name="existingMember">Existing Member?</string>
     <string name="createAccountCheckBox">Do you accept our Terms and Conditions?</string>
     <string name="signUpString">Sign Up</string>
+    <string name="welcomeHome">Logged in as:</string>
+    <string name="title_activity_maps">MapsActivity</string>
 
 </resources>

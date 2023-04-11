@@ -4,38 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
-
-    <Button
-        android:id="@+id/logOutBtnHome"
-        android:layout_width="93dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="10dp"
-        android:text="LOGOUT"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/homeDisplayedEmail" />
-
-    <TextView
-        android:id="@+id/homeDisplayedEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="@string/welcomeHome"
-        app:layout_constraintBottom_toTopOf="@+id/homeDisplayedEmail"
-        app:layout_constraintEnd_toEndOf="@+id/homeDisplayedEmail"
-        app:layout_constraintStart_toStartOf="@+id/homeDisplayedEmail" />
+    tools:context=".MapActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav"
@@ -44,7 +13,7 @@
         android:background="#8A8989"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" >
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -59,7 +28,7 @@
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/homeselected" />
+                app:srcCompat="@drawable/home" />
 
             <ImageView
                 android:id="@+id/mapIcon"
@@ -69,7 +38,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/homeIcon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/compass_circular_tool" />
+                app:srcCompat="@drawable/compass_circular_toolselected" />
 
             <ImageView
                 android:id="@+id/messageIcon"
@@ -82,5 +51,4 @@
                 app:srcCompat="@drawable/chat" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.bottomnavigation.BottomNavigationView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
