@@ -88,6 +88,13 @@ public class CreateAccountActivity extends AppCompatActivity {
                     Toast.makeText(CreateAccountActivity.this, "Confirm Password!", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                //checks if password is less than 6 characters
+                int passwordCharacterCount = confirmPassword.length();
+                if(passwordCharacterCount < 6){
+                    progressBar.setVisibility(View.GONE);
+                    Toast.makeText(CreateAccountActivity.this, "Password must be at least 6 characters!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 //checks if password equals confirm password
                 if(confirmPassword.equals(password)) {
                 }
